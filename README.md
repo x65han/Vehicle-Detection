@@ -34,8 +34,47 @@
 
 ### Computer Vision Pipeline
 
-<div align="center"><b>Sample Input Image</b></div>
-<div align="center"><img width="60%" src="https://github.com/x65han/Advanced-Lane-Detection/blob/master/assets/report/illos-home.jpg?raw=true" /></div>
-<hr>
-<div align="center"><b>Hooray</b></div>
-<div align="center"><img width="60%" src="https://github.com/x65han/Advanced-Lane-Detection/blob/master/assets/report/illos-home.jpg?raw=true" /></div>
+```diff
++ Define Window Grid to extract images
+```
+<div align="center"><img width="60%" src="https://github.com/x65han/Vehicle-Detection/blob/master/assets/report/window_1.jpg?raw=true" /></div>
+<div align="center"><img width="60%" src="https://github.com/x65han/Vehicle-Detection/blob/master/assets/report/window_2.jpg?raw=true" /></div>
+<div align="center"><img width="60%" src="https://github.com/x65han/Vehicle-Detection/blob/master/assets/report/window_3.jpg?raw=true" /></div>
+<div align="center"><img width="60%" src="https://github.com/x65han/Vehicle-Detection/blob/master/assets/report/window_4.jpg?raw=true" /></div>
+
+```diff
++ Extract Image HOG (Histogram of Oriented Gradients) Features
+```
+
+<div align="center"><img width="60%" src="https://github.com/x65han/Vehicle-Detection/blob/master/assets/report/hog.jpg?raw=true" /></div>
+
+
+```diff
++ Feed through Pre-train Classifier to detect vehicles
+```
+
+<div align="center"><img width="60%" src="https://github.com/x65han/Vehicle-Detection/blob/master/assets/report/test1_output.jpg?raw=true" /></div>
+
+```diff
++ Apply heatmap to identify all vehicle detections
+```
+
+<div align="center"><img width="60%" src="https://github.com/x65han/Vehicle-Detection/blob/master/assets/report/heatmap.jpg?raw=true" /></div>
+
+```diff
++ Apply threshold to remove false positives (3 overlapps = vehicle)
+```
+
+<div align="center"><img width="60%" src="https://github.com/x65han/Vehicle-Detection/blob/master/assets/report/heatmap_threshold.jpg?raw=true" /></div>
+
+```diff
++ Draw boxes on Original Image
+```
+
+<div align="center"><img width="60%" src="https://github.com/x65han/Vehicle-Detection/blob/master/assets/report/output_sample.jpg?raw=true" /></div>
+
+```diff
++ Hooray
+```
+
+<div align="center"><img width="80%" src="https://github.com/x65han/Vehicle-Detection/blob/master/assets/report/output_images.jpg?raw=true" /></div>
