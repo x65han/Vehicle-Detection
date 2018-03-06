@@ -1,37 +1,41 @@
 # Vehicle Detection
-[![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
+
+<img align="right" src="https://cdn.instructables.com/FNN/AZF7/IG2HFKH0/FNNAZF7IG2HFKH0.LARGE.jpg" width="250px" />
+<img src="https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg"/>
+
+- **Vehicle Detection + Machine Learning**
+- `OpenCV` + `Python` + `scikits-learn` + `scikit-image`
+<br>
+<hr>
+<div align="center">
+    <img src="https://kaggle2.blob.core.windows.net/competitions/kaggle/3428/media/scikit-learn-logo.png" width="300px" />
+    &emsp;&emsp;&emsp;&emsp;
+    <img src="http://scikit-image.org/_static/img/logo.png" width="300px" />
+</div>
+
+<hr>
+
+<div align="center"><b>Lane Detection</b>&emsp;|&emsp;<a href="https://github.com/x65han/Vehicle-Detection/blob/master/outputs/project_video.mp4?raw=true">Full Video</a>&emsp;|&emsp;<a href="https://github.com/x65han/Vehicle-Detection/blob/master/report.md">Full Report</a></div><br>
+<div align="center"><img width="60%" src="https://github.com/x65han/Vehicle-Detection/blob/master/assets/report/sample.gif?raw=true"/></div><br>
 
 
-In this project, your goal is to write a software pipeline to detect vehicles in a video (start with the test_video.mp4 and later implement on full project_video.mp4), but the main output or product we want you to create is a detailed writeup of the project.  Check out the [writeup template](https://github.com/udacity/CarND-Vehicle-Detection/blob/master/writeup_template.md) for this project and use it as a starting point for creating your own writeup.  
+## Overview
 
-Creating a great writeup:
----
-A great writeup should include the rubric points as well as your description of how you addressed each point.  You should include a detailed description of the code used in each step (with line-number references and code snippets where necessary), and links to other supporting documents or external references.  You should include images in your writeup to demonstrate how your code works with examples.  
+### Machine Learning Classifier
 
-All that said, please be concise!  We're not looking for you to write a book here, just a brief description of how you passed each rubric point, and references to the relevant code :). 
+- I trained a `linear SVM` using `LinearSVC` from **sklearn**
+```python 
+    from sklearn.svm import LinearSVC
+```
+- To go through all the training images, my classifier takes **0.6 seconds** to achieve **97.6% accuracy**.
+- Here is a sample batch of my training images provided by [GTI Vehicle Image Database](http://www.gti.ssr.upm.es/data/Vehicle_database.html)
+- From this awesome vehicle image database, there are two types of data: `car images` & `non car images`
+<div align="center"><img width="80%" src="https://github.com/x65han/Vehicle-Detection/blob/master/assets/report/cars.jpg?raw=true"/></div><br>
 
-You can submit your writeup in markdown or use another method and submit a pdf instead.
+### Computer Vision Pipeline
 
-The Project
----
-
-The goals / steps of this project are the following:
-
-* Perform a Histogram of Oriented Gradients (HOG) feature extraction on a labeled training set of images and train a classifier Linear SVM classifier
-* Optionally, you can also apply a color transform and append binned color features, as well as histograms of color, to your HOG feature vector. 
-* Note: for those first two steps don't forget to normalize your features and randomize a selection for training and testing.
-* Implement a sliding-window technique and use your trained classifier to search for vehicles in images.
-* Run your pipeline on a video stream (start with the test_video.mp4 and later implement on full project_video.mp4) and create a heat map of recurring detections frame by frame to reject outliers and follow detected vehicles.
-* Estimate a bounding box for vehicles detected.
-
-Here are links to the labeled data for [vehicle](https://s3.amazonaws.com/udacity-sdc/Vehicle_Tracking/vehicles.zip) and [non-vehicle](https://s3.amazonaws.com/udacity-sdc/Vehicle_Tracking/non-vehicles.zip) examples to train your classifier.  These example images come from a combination of the [GTI vehicle image database](http://www.gti.ssr.upm.es/data/Vehicle_database.html), the [KITTI vision benchmark suite](http://www.cvlibs.net/datasets/kitti/), and examples extracted from the project video itself.   You are welcome and encouraged to take advantage of the recently released [Udacity labeled dataset](https://github.com/udacity/self-driving-car/tree/master/annotations) to augment your training data.  
-
-Some example images for testing your pipeline on single frames are located in the `test_images` folder.  To help the reviewer examine your work, please save examples of the output from each stage of your pipeline in the folder called `ouput_images`, and include them in your writeup for the project by describing what each image shows.    The video called `project_video.mp4` is the video your pipeline should work well on.  
-
-**As an optional challenge** Once you have a working pipeline for vehicle detection, add in your lane-finding algorithm from the last project to do simultaneous lane-finding and vehicle detection!
-
-**If you're feeling ambitious** (also totally optional though), don't stop there!  We encourage you to go out and take video of your own, and show us how you would implement this project on a new video!
-
-## How to write a README
-A well written README file can enhance your project and portfolio.  Develop your abilities to create professional README files by completing [this free course](https://www.udacity.com/course/writing-readmes--ud777).
-
+<div align="center"><b>Sample Input Image</b></div>
+<div align="center"><img width="60%" src="https://github.com/x65han/Advanced-Lane-Detection/blob/master/assets/report/illos-home.jpg?raw=true" /></div>
+<hr>
+<div align="center"><b>Hooray</b></div>
+<div align="center"><img width="60%" src="https://github.com/x65han/Advanced-Lane-Detection/blob/master/assets/report/illos-home.jpg?raw=true" /></div>
