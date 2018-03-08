@@ -1,3 +1,10 @@
-open http://www.gti.ssr.upm.es/~jal/download.html
-# for more information: go to http://www.gti.ssr.upm.es/data/Vehicle_database.html
-echo Go to http://www.gti.ssr.upm.es/~jal/download.html to download data
+rm -rf training_data
+mkdir training_data
+cd training_data
+wget https://s3.amazonaws.com/udacity-sdc/Vehicle_Tracking/vehicles.zip
+wget https://s3.amazonaws.com/udacity-sdc/Vehicle_Tracking/non-vehicles.zip
+unzip vehicles.zip
+unzip non-vehicles.zip
+rm vehicles.zip
+rm non-vehicles.zip
+rm -rf __MACOSX
