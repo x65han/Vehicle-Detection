@@ -8,9 +8,9 @@
 <br>
 <hr>
 <div align="center">
-    <img src="https://kaggle2.blob.core.windows.net/competitions/kaggle/3428/media/scikit-learn-logo.png" width="300px" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" width="300" />
     &emsp;&emsp;&emsp;&emsp;
-    <img src="http://scikit-image.org/_static/img/logo.png" width="300px" />
+    <img src="http://scikit-image.org/_static/img/logo.png" width="300" />
 </div>
 
 <hr>
